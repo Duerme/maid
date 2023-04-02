@@ -3,7 +3,7 @@ import socket
 import config
 
 def collect_vendor_mac():
-    vendor_file = open("mac-vendor.txt", encoding="utf-8")
+    vendor_file = open("vendor_id.txt", encoding="utf-8")
     data = vendor_file.read()
     data_to_list = data.split("\n")
     mac_identifiers = {}
@@ -24,7 +24,6 @@ def arp_request(ip_address):
     for host in answered:
         current_mac = host[1].hwsrc.replace(':', '').lower()
         oui = current_mac[0:6]
-        print(oui)
         vendor = mac_identifiers.get(oui, "UNKNOWN")
         print(host[1].psrc + "\t\t" + host[1].hwsrc + "\t" + vendor)
 
