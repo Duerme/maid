@@ -35,5 +35,4 @@ def device_info(host):
         print(f"Could not resolve the hostname for {host}. Error message: {e}")
 
 arp_request(config.ip_subnet)
-# hostname = device_info("10.0.0.32")
 
