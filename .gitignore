@@ -2,3 +2,4 @@ config.py
 vendor_id_raw.txt
 modify_vendor.py
 __pycache__/
+.obsidian
