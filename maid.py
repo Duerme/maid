@@ -38,6 +38,6 @@ def device_info(host):
             return hostname
     except socket.herror:
         pass
-    return "None"
+    return "Could not resolve hostname"
 
 arp_request(config.ip_subnet)
