@@ -20,7 +20,7 @@ def arp_request(ip_address):
     answered = scapy.srp(full_packet, timeout=1, iface=config.ntwrk_adapter, verbose=False)[0]
     mac_identifiers = collect_vendor_mac()
     
-    print("------------------------------------------------------------------------------------------------------------\nIP\t\t\tMAC\t\t\tVendor\t\t\t\t\t\tHostname\n------------------------------------------------------------------------------------------------------------")
+    print("------------------------------------------------------------------------------------------------------------\nIP\t\tMAC\t\t\tVendor\t\t\t\t\tHostname\n------------------------------------------------------------------------------------------------------------")
     for host in answered:
         ip = host[1].psrc
         mac = host[1].hwsrc
@@ -28,7 +28,8 @@ def arp_request(ip_address):
         current_mac = host[1].hwsrc.replace(':', '').lower()
         oui = current_mac[0:6]
         vendor = mac_identifiers.get(oui, "UNKNOWN")
-        print(ip + "\t\t" + mac + "\t" + vendor + "\t\t" + str(hostname))
+        # print(ip + "\t\t" + mac + "\t" + vendor + "\t\t" + str(hostname))
+        print(ip.ljust(16) + mac.ljust(24) + vendor.ljust(40) + str(hostname))
 
 def device_info(host):
     try:
@@ -40,4 +41,3 @@ def device_info(host):
     return "None"
 
 arp_request(config.ip_subnet)
-
