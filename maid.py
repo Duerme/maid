@@ -1,13 +1,13 @@
 import scapy.all as scapy
 import socket
 import config
-import optparse
+import argparse
 
 # Function to capture command line arguments
 def define_arguments():
-    parser = optparse.OptionParser()
-    parser.add_option("-t", "--target", dest="target", help="Target IP/IP range.")
-    (options, arguments) = parser.parse_args()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-t", "--target", dest="target", help="Target IP/IP range.")
+    options = parser.parse_args()
     return options
 
 # Function to read and process MAC vendor data from a file
