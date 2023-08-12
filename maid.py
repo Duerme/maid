@@ -1,6 +1,14 @@
 import scapy.all as scapy
 import socket
 import config
+import optparse
+
+# Function to capture command line arguments
+def define_arguments():
+    parser = optparse.OptionParser()
+    parser.add_option("-t", "--target", dest="target", help="Target IP/IP range.")
+    (options, arguments) = parser.parse_args()
+    return options
 
 # Function to read and process MAC vendor data from a file
 def collect_vendor_mac():
@@ -48,5 +56,6 @@ def device_info(host):
         pass
     return "Could not resolve hostname"
 
+arguments = define_arguments()
 # Call the ARP request function with the specified IP subnet
-arp_request(config.ip_subnet)
+arp_request(arguments.target)
