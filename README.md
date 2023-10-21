@@ -7,7 +7,7 @@ MAID is a network penetration tool that follows a step-by-step approach of Map, 
 - scapy
 - config
 - argparse
-- 
+
 ## Usage
 To run the program, you need to specify the target IP or IP range as an argument using the -t or --target option. For example:
 
