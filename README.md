@@ -18,9 +18,4 @@ This will scan the entire subnet of 192.168.1.0/24 and display the results in a 
 ## Output
 The output of the program will look something like this:
 
-------------------------------------------------------------------------------------------------------------
-IP              MAC                     Vendor                                  Hostname
-------------------------------------------------------------------------------------------------------------
-192.168.1.1     00:11:22:33:44:55       Cisco Systems Inc                       router.example.com
-192.168.1.2     66:77:88:99:aa:bb       Dell Inc                                laptop.example.com
-192.168.1.3     cc:dd:ee:ff:00:11       Apple Inc                               iphone.example.com
+![](https://ibb.co/Z2xsG2d)
