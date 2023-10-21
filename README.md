@@ -18,4 +18,4 @@ This will scan the entire subnet of 192.168.1.0/24 and display the results in a 
 ## Output
 The output of the program will look something like this:
 
-![](https://ibb.co/Z2xsG2d)
+![]([https://ibb.co/Z2xsG2d](https://i.ibb.co/Y0h9P02/Capture.png)https://i.ibb.co/Y0h9P02/Capture.png)
